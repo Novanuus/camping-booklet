@@ -1,16 +1,15 @@
-# React + Vite
+# Camping Checklist
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Consolidating my brain plans into a detailed list I can reference back to for acquiring and collecting camping gear needed.
 
-Currently, two official plugins are available:
+Currently basing this checklist on the need for initially getting out camping with 2 young kids.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Future Plans
 
-## React Compiler
+Once I've gone on a couple trips I plan to update this to allow for more custom sections regarding meals and memory making. Also, want to condense the gear sections into what camping equipment I actually own.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Coding goals
 
-## Expanding the ESLint configuration
+Using this project as a basis to dive into Node.js, Visual Studios Code, the basic fundamentals of Javascript CSS and Tailwind CSS. Finally  a large portion of this is being built interacting with AI.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+As of now mainly using a ChatGPT model, but plan to explore other options including self-hosted LLM setups.

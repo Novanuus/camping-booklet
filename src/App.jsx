@@ -24,7 +24,7 @@ export default function VintageCampingChecklist() {
 
   return (
     <div className="bg-[#f6f1e7] min-h-screen text-stone-900 font-serif p-8 md:p-14 print:p-0 print:bg-white">
-      <div className="max-w-5xl mx-auto bg-[#f8f4ea] border-[10px] border-emerald-950 rounded-3xl shadow-2xl overflow-hidden print:border-none print:rounded-none print:shadow-none">
+      <div className="max-w-[1000px] mx-auto bg-[#f8f4ea] border-[10px] border-emerald-950 rounded-3xl shadow-2xl overflow-hidden print:border-none print:rounded-none print:shadow-none">
 
         {/* HEADER */}
         <div className="border-b-[12px] border-emerald-950 px-10 py-14 bg-[linear-gradient(to_bottom,#f6f1e7,#efe6d3)] print:px-6 print:py-6 print:border-b-2 print:bg-white">

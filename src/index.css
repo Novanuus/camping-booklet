@@ -116,3 +116,75 @@ h2 {
 .page-break-inside-avoid {
   break-inside: avoid;
 }
+
+/* Setup for booklet printing */
+@media print {
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+
+  @page {
+    size: letter portrait;
+    margin: 0;
+  }
+
+}
+
+/* Print fix maybe */
+@media print {
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: white;
+  }
+
+  @page {
+    size: letter portrait;
+    margin: 0;
+  }
+
+  .booklet-sheet {
+    width: 8.5in;
+    height: 11in;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    background: white;
+  }
+
+  .booklet-panel {
+    box-sizing: border-box;
+
+    padding: 0.35in;
+
+    overflow: hidden;
+
+    border: 1px dashed #c4c4c4;
+
+    background: #f8f4ea;
+  }
+}
+
+.booklet-panel {
+  border: 4px solid red;
+}
+
+@media print {
+  h1 {
+    font-size: 32pt !important;
+  }
+}
+
+@media print {
+  h1, h2, h3, p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}

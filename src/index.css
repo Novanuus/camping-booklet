@@ -170,7 +170,14 @@ h2 {
 
     background: #f8f4ea;
   }
-}
+
+  .booklet-panel .leading-tight {
+    text-align: left !important;
+  }
+
+  .booklet-panel .border-stone-700.border-2 {
+    border-width: 1px !important;
+  }
 
 @media print {
   h1 {
@@ -183,4 +190,7 @@ h2 {
     margin: 0 !important;
     padding: 0 !important;
   }
+}
+
+
 }

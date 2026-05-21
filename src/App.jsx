@@ -60,23 +60,37 @@ export default function VintageCampingChecklist() {
   // DATA
   // =====================================================
 
-  const leftSections = [
-    {
-      title: "Critical Items",
-      items: [
-        "Tent System (Tent, stakes, footprint)",
-        "Sleeping setup for everyone",
-        "Cooler + food",
-        "Coleman stove + propane",
-        "Coffee setup",
-        "Water jug + bottles",
-        "Toiletries / Medications / Supplements",
-        "Phone + charger",
-        "Wallet / ID / Keys",
-        "Reservation information",
-      ],
-    },
+  const criticalItemsSection = {
+    title: "Critical Items",
+    items: [
+      "Tent System (Tent, stakes, footprint)",
+      "Sleeping setup for everyone",
+      "Cooler + food",
+      "Coleman stove + propane",
+      "Coffee setup",
+      "Water jug + bottles",
+      "Toiletries / Medications / Supplements",
+      "Phone + charger",
+      "Wallet / ID / Keys",
+      "Reservation information",
+    ],
+  };
 
+  const beforeLeavingSection = {
+    title: "Before Leaving Campsite",
+    items: [
+      "Tent emptied completely",
+      "Lanterns packed",
+      "Stakes removed",
+      "Trash removed",
+      "Food packed",
+      "Toys collected",
+      "Fire fully extinguished",
+      "Final campsite walkaround",
+    ],
+  };
+
+  const leftSections = [
     {
       title: "Sleep System Bin",
       items: [
@@ -173,20 +187,6 @@ export default function VintageCampingChecklist() {
         "Extra clothes",
       ],
     },
-
-    {
-      title: "Before Leaving Campsite",
-      items: [
-        "Tent emptied completely",
-        "Lanterns packed",
-        "Stakes removed",
-        "Trash removed",
-        "Food packed",
-        "Toys collected",
-        "Fire fully extinguished",
-        "Final campsite walkaround",
-      ],
-    },
   ];
 
 
@@ -274,7 +274,7 @@ export default function VintageCampingChecklist() {
           </div>
 
           {/* ALL SECTIONS */}
-          {[...leftSections, ...rightSections].map((sectionData, idx) => (
+          {[criticalItemsSection, ...leftSections, ...rightSections, beforeLeavingSection].map((sectionData, idx) => (
             <div key={idx}>
               {section(sectionData.title, sectionData.items)}
             </div>
@@ -315,6 +315,55 @@ export default function VintageCampingChecklist() {
 
   const printView = (
     <div className="hidden print:grid booklet-sheet">
+
+      {/* BACK PAGE */}
+      <div className="booklet-panel bg-[#fcfaf4]">
+
+        <div className="h-full flex flex-col">
+
+          {/* ===================== */}
+          {/* BEFORE LEAVING */}
+          {/* ===================== */}
+
+          <div className="space-y-[2px] text-[8px] leading-tight mb-5">
+
+            {section(
+              beforeLeavingSection.title,
+              beforeLeavingSection.items,
+              true
+            )}
+
+          </div>
+
+
+          {/* LESSONS LEARNED */}
+          <div className="border-2 border-stone-400 rounded-xl p-3 bg-[#fcfaf4]">
+
+            <h2 className="text-[10px] text-center uppercase tracking-wide text-emerald-950 mb-2 font-bold">
+              Lessons Learned
+            </h2>
+
+            <div className="space-y-1">
+              {Array.from({ length: 10 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="border-b border-stone-400 h-4"
+                />
+              ))}
+            </div>
+
+          </div>
+
+
+          {/* FOOTER QUOTE */}
+          <div className="mt-2 text-center text-[7px] text-stone-600 italic">
+            “The goal is not perfect camping. The goal is camping that gets repeated.”
+          </div>
+
+        </div>
+      </div>
+
+
 
       {/* COVER */}
       <div className="booklet-panel bg-[#efe6d3]">
@@ -412,60 +461,11 @@ export default function VintageCampingChecklist() {
           <div className="flex-1 overflow-hidden">
 
             {section(
-              leftSections[0].title,
-              leftSections[0].items,
+              criticalItemsSection.title,
+              criticalItemsSection.items,
               true
             )}
 
-          </div>
-
-        </div>
-      </div>
-
-
-
-      {/* BACK PAGE */}
-      <div className="booklet-panel bg-[#fcfaf4]">
-
-        <div className="h-full flex flex-col">
-
-          {/* ===================== */}
-          {/* BEFORE LEAVING */}
-          {/* ===================== */}
-
-          <div className="space-y-[2px] text-[8px] leading-tight mb-5">
-
-            {section(
-              "Before Leaving Campsite",
-              rightSections.find(s => s.title === "Before Leaving Campsite").items,
-              true
-            )}
-
-          </div>
-
-
-          {/* LESSONS LEARNED */}
-          <div className="border-2 border-stone-400 rounded-xl p-3 bg-[#fcfaf4]">
-
-            <h2 className="text-[10px] text-center uppercase tracking-wide text-emerald-950 mb-2 font-bold">
-              Lessons Learned
-            </h2>
-
-            <div className="space-y-1">
-              {Array.from({ length: 10 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="border-b border-stone-400 h-4"
-                />
-              ))}
-            </div>
-
-          </div>
-
-
-          {/* FOOTER QUOTE */}
-          <div className="mt-2 text-center text-[7px] text-stone-600 italic">
-            “The goal is not perfect camping. The goal is camping that gets repeated.”
           </div>
 
         </div>

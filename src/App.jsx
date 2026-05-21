@@ -83,19 +83,20 @@ export default function VintageCampingChecklist() {
                 <div>• Warm layers before sunset</div>
                 <div>• More snacks than expected</div>
                 <div>• Happy kids = successful trip</div>
+                <div>• Teach kids responsibility</div>
               </div>
             </div>
 
           </div>
 
           {section("Critical Items", [
-            "Tent + stakes",
+            "Tent System (Tent, stakes, footprint)",
             "Sleeping setup for everyone",
             "Cooler + food",
             "Coleman stove + propane",
             "Coffee setup",
             "Water jug + bottles",
-            "Toiletries + medications",
+            "Toiletries / Medications / Supplements",
             "Phone + charger",
             "Wallet / ID / Keys",
             "Reservation information",
@@ -103,46 +104,40 @@ export default function VintageCampingChecklist() {
 
           {section("Sleep System Bin", [
             "Tent",
-            "Sleeping bags / blankets",
-            "Sleeping pads or air mattress",
-            "Pillows",
+            "Sleep System (▢ Dad, ▢ Luke, ▢ Emma)",
             "Extra blanket",
             "Pajamas",
             "Warm layers",
             "Stuffed animals / comfort items",
-            "Headlamps",
-            "Lantern",
+            "Headlamps / Lanterns",
             "Power bank / batteries",
+            "Hammock + Paracord",
           ])}
 
           {section("Camp Setup Bin", [
             "Camp chairs",
             "Trash bags",
             "Paper towels",
-            "Bug spray",
-            "Sunscreen",
+            "Bug spray / Sunscreen",
             "Baby wipes",
             "Hand sanitizer",
             "Multi-tool",
             "Firestarter",
             "Backup lighter",
             "Roasting sticks",
+            "Mosquito Repellant Lights",
+            "Music Speaker",
           ])}
 
           {section("Kitchen & Coffee Bin", [
-            "Coleman stove",
-            "Propane fuel",
-            "Pot or kettle",
-            "Pan / skillet",
-            "Spatula + tongs",
+            "Coleman stove + Fuel",
+            "Cookware + Tools",
             "Knife + cutting board",
             "Plates / bowls / utensils",
             "Dish soap + sponge",
-            "Pour-over cone",
-            "Coffee filters",
-            "Ground coffee",
-            "Creamer + sugar",
-            "Coffee mugs",
+            "Coffee Setup (Mugs, Creamer, Grounds)",
+            "Aeropress, Moka Pot, Filters",
+            "Backup Instant Coffee"
           ])}
 
           {section("Food & Cooler", [
@@ -156,19 +151,17 @@ export default function VintageCampingChecklist() {
             "Chocolate + graham crackers",
             "Fruit",
             "Backup snacks",
-            "Drinks",
+            "Drinks (Water / OJ / Camp drinks)",
+            "S'MORES / Banana boats / Special Camp treats"
           ])}
 
           {section("Kids Activity Bin", [
             "Glow sticks",
-            "Coloring books",
-            "Crayons / markers",
-            "Small toys",
+            "Coloring books / crayons / markers",
             "Bubbles",
             "Books",
             "Card games",
-            "Bikes / scooters",
-            "Helmets",
+            "Bikes / scooters / helmets",
             "Kid emergency bag",
             "Extra clothes",
           ])}

@@ -76,6 +76,19 @@ export default function VintageCampingChecklist() {
     ],
   };
 
+  const goldenRulesSection = {
+    title: "Golden Rules",
+    items: [
+      "Keep meals simple",
+      "Reliable Backup food options",
+      "Prioritize Coffee",
+      "Warm layers before sunset",
+      "More snacks than expected",
+      "Happy kids = successful trip",
+      "Focus on memories not perfection",
+    ],
+  };
+
   const beforeLeavingSection = {
     title: "Before Leaving Campsite",
     items: [
@@ -240,7 +253,7 @@ export default function VintageCampingChecklist() {
               </h3>
 
               <div className="space-y-3 text-sm">
-                {["Campground", "Dates", "Weather Forecast", "Campsite #"].map((label, i) => (
+                {["Campground", "Dates", "Weather Forecast", "Campsite #", "Point of Contact"].map((label, i) => (
                   <div key={i}>
                     <div className="mb-1 text-stone-600">
                       {label}
@@ -256,17 +269,13 @@ export default function VintageCampingChecklist() {
             <div className="border-2 border-stone-400 rounded-2xl p-5 bg-[#fcfaf4]">
 
               <h3 className="text-xl uppercase tracking-wide mb-3 text-emerald-950">
-                Golden Rules
+                {goldenRulesSection.title}
               </h3>
 
               <div className="space-y-2 text-stone-800 text-sm">
-                <div>• Keep meals simple</div>
-                <div>• One guaranteed kid-safe meal</div>
-                <div>• Coffee packed first</div>
-                <div>• Warm layers before sunset</div>
-                <div>• More snacks than expected</div>
-                <div>• Happy kids = successful trip</div>
-                <div>• Teach kids responsibility</div>
+                {goldenRulesSection.items.map((rule, i) => (
+                  <div key={i}>• {rule}</div>
+                ))}
               </div>
 
             </div>
@@ -413,7 +422,7 @@ export default function VintageCampingChecklist() {
 
               <div className="space-y-[1px] text-[10px] leading-tight text-left">
 
-                {["Campground", "Dates", "Weather", "Site #"].map((label, i) => (
+                {["Campground", "Dates", "Weather", "Site #", "Point of Contact"].map((label, i) => (
                   <div key={i}>
 
                     <div className="text-stone-600 mb-[1px]">
@@ -433,19 +442,15 @@ export default function VintageCampingChecklist() {
             {/* GOLDEN RULES */}
             <div className="border border-stone-400 rounded-md p-1 bg-[#fcfaf4]">
 
+
               <h3 className="text-[12px] uppercase tracking-wide mb-2 text-emerald-950 font-bold">
-                Golden Rules
+                {goldenRulesSection.title}
               </h3>
 
               <div className="space-y-[3px] text-[10px] text-stone-800 leading-tight">
-
-                <div>• Keep meals simple</div>
-                <div>• Kid-safe backup meals</div>
-                <div>• Coffee packed first</div>
-                <div>• Warm layers before sunset</div>
-                <div>• More snacks than expected</div>
-                <div>• Happy kids = successful trip</div>
-
+                {goldenRulesSection.items.map((rule, i) => (
+                  <div key={i}>• {rule}</div>
+                ))}
               </div>
 
             </div>
